@@ -1,0 +1,31 @@
+body {
+  font-size: 13px;
+  font-family: Arial;
+}
+h1 {
+  font-size: 14px;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 5px;
+}
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin-bottom: 5px;
+}
+ul > li {
+  padding: 3px;
+}
+input[type="text"] {
+  padding: 3px;
+  border-radius: 3px;
+  border: 1px solid #ddd;
+}
+.done {
+  color: #aaa;
+  text-decoration: line-through;
+}
+.linkLike {
+  color: blue;
+  cursor: pointer;
+  font-weight: normal;
+}

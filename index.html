@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="https://unpkg.com/vue"></script>
+  <link rel="stylesheet" href="style.css">
+  <title>Vue.js TODO</title>
+</head>
+<body>
+
+  <div id="myapp">
+    <h1>
+      TODO
+      <small>{{remaining}}/{{this.todos.length}}</small>
+      <span class="linkLike" v-on:click="purge">[purge]</span>
+    </h1>
+    <ul>
+      <li v-for="(todo, index) in todos">
+        <input type="checkbox" :checked="todo.done" v-on:click="todo.done = !todo.done">
+        <span :class="{ done: todo.done }">{{ todo.task }}</span>
+        <span class="linkLike" v-on:click="del(index)">[x]</span>
+      </li>
+    </ul>
+    <input type="text" v-model="new_task" v-on:keyup.enter="add" placeholder="ADD TASK">
+  </div>
+
+  <script src="vue.js"></script>
+</body>
+</html>
